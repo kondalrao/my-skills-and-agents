@@ -1,0 +1,79 @@
+# Shared Skills and Agents
+
+Use this repository as the source of truth for personal AI skills and agents.
+Native skill and agent invocation belongs to Codex, Claude Code, and OpenCode.
+Cursor and VS Code receive this instruction-level projection only.
+
+## Available Agent Roles
+
+- `agent-installer`: Use when a task needs help selecting, copying, or organizing custom agent files from this repository into Codex agent directories.
+- `agent-organizer`: Use when a broad task needs concrete multi-agent decomposition, clear ownership boundaries, dependency ordering, and explicit integration checkpoints.
+- `ai-engineer`: Use when a task needs implementation or debugging of model-backed application features, agent flows, or evaluation hooks.
+- `api-designer`: Use when a task needs API contract design, evolution planning, or compatibility review before implementation starts.
+- `architect-reviewer`: Use when a task needs architectural review for coupling, system boundaries, long-term maintainability, or design coherence.
+- `architect`: Use when a task needs both high-level system design and a repo-grounded implementation blueprint, including tradeoffs, boundaries, files, interfaces, and build order.
+- `backend-developer`: Use when a task needs scoped backend implementation or backend bug fixes after the owning path is known.
+- `change-risk-assessor`: Use when a task needs an explicit assessment of what could break from a proposed or current change, including blast radius, compatibility, and rollout risk.
+- `chaos-engineer`: Use when a task needs resilience analysis for dependency failure, degraded modes, recovery behavior, or controlled fault-injection planning.
+- `code-explorer`: Use when a task needs deep codebase analysis before changes, including entry points, execution paths, architecture layers, and dependency mapping.
+- `code-mapper`: Use when the parent agent needs a high-confidence map of code paths, ownership boundaries, and execution flow before changes are made.
+- `code-reviewer`: Use when a task needs high-confidence PR-style review focused on correctness, security, behavior regressions, merge readiness, and missing tests.
+- `comment-analyzer`: Use when a task needs review of code comments for accuracy, completeness, low-value restatement, or comment-rot risk.
+- `config-auditor`: Use when a task needs configuration review for drift, bad defaults, unsafe flags, environment mismatch, secrets handling, or runtime behavior controlled by config.
+- `context-manager`: Use when a task needs a compact project context summary that other subagents can rely on before deeper work begins.
+- `conversation-analyzer`: Use when analyzing conversation transcripts to identify repeated agent mistakes worth preventing with rules, hooks, or guardrails.
+- `cpp-pro`: Use when a task needs C++ work involving performance-sensitive code, memory ownership, concurrency, or systems-level integration.
+- `data-researcher`: Use when a task needs source gathering and synthesis around datasets, metrics, data pipelines, or evidence-backed quantitative questions.
+- `debugger`: Use when a task needs deep bug isolation across code paths, stack traces, runtime behavior, or failing tests.
+- `docs-architect`: Creates comprehensive technical documentation from existing codebases. Analyzes architecture, design patterns, and implementation details to produce long-form technical manuals and ebooks. Use PROACTIVELY for system documentation, architecture guides, or technical deep-dives.
+- `docs-researcher`: Use when a task needs documentation-backed verification of APIs, version-specific behavior, or framework options.
+- `docs-writer`: Use when a task needs durable documentation written or updated, such as README sections, runbooks, usage docs, architecture notes, onboarding guides, or change notes.
+- `elixir-expert`: Use when a task needs Elixir and OTP expertise for processes, supervision, fault tolerance, or Phoenix application behavior.
+- `embedded-systems`: Use when a task needs embedded or hardware-adjacent work involving device constraints, firmware boundaries, timing, or low-level integration.
+- `error-detective`: Use when a task needs log, exception, or stack-trace analysis to identify the most probable failure source quickly.
+- `failure-reproducer`: Use when a task needs a vague or intermittent bug turned into deterministic reproduction steps, captured evidence, and a narrowed failure boundary.
+- `fintech-engineer`: Use when a task needs financial systems engineering across ledgers, reconciliation, transfers, settlement, or compliance-sensitive transactional flows.
+- `frontend-developer`: Use when a task needs scoped frontend implementation or UI bug fixes with production-level behavior and quality.
+- `fullstack-developer`: Use when one bounded feature or bug spans frontend and backend and a single worker should own the entire path.
+- `go-build-resolver`: Use when Go builds, vet checks, or lint passes fail and the task is to make the code compile cleanly with minimal targeted changes.
+- `go-reviewer`: Use when reviewing Go code for idiomatic correctness, concurrency safety, error handling, and performance risks.
+- `golang-pro`: Use when a task needs Go expertise for concurrency, service implementation, interfaces, tooling, or performance-sensitive backend paths.
+- `graphql-architect`: Use when a task needs GraphQL schema evolution, resolver architecture, federation design, or distributed graph performance/security review.
+- `harness-optimizer`: Use when improving local agent harness configuration for reliability, throughput, and cost without rewriting product code.
+- `incident-responder`: Use when a task needs broad production incident triage, containment planning, or evidence-driven root cause analysis.
+- `integration-tester`: Use when a task needs cross-boundary validation across services, modules, APIs, queues, databases, or UI-to-backend seams rather than isolated unit checks.
+- `javascript-pro`: Use when a task needs JavaScript-focused work for runtime behavior, browser or Node execution, or application-level code that is not TypeScript-led.
+- `knowledge-synthesizer`: Use when multiple agents have returned findings and the parent agent needs a distilled, non-redundant synthesis.
+- `loop-operator`: Use when operating autonomous agent loops, tracking checkpoints, detecting stalls, and intervening safely when execution degrades.
+- `market-researcher`: Use when a task needs market landscape, positioning, or demand-side research tied to a technical product or category.
+- `mcp-developer`: Use when a task needs work on MCP servers, MCP clients, tool wiring, or protocol-aware integrations.
+- `microservices-architect`: Use when a task needs service-boundary design, inter-service contract review, or distributed-system architecture decisions.
+- `network-engineer`: Use when a task needs network-path analysis, service connectivity debugging, load-balancer review, or infrastructure network design input.
+- `observability-engineer`: Use when a task needs better logs, metrics, traces, alertability, or debugging visibility around a feature, incident path, or operational blind spot.
+- `performance-engineer`: Use when a task needs performance investigation for slow requests, hot paths, rendering regressions, or scalability bottlenecks.
+- `planner`: Use when a task needs a comprehensive implementation plan for a feature, refactor, or architecture change before coding starts.
+- `platform-engineer`: Use when a task needs internal platform, golden-path, or self-service infrastructure design for developers.
+- `product-spec-writer`: Use when a task needs a clear product or feature spec covering intent, user flows, scope, constraints, success criteria, and implementation-shaping decisions before coding.
+- `prompt-engineer`: Use when a task needs prompt revision, instruction design, eval-oriented prompt comparison, or prompt-output contract tightening.
+- `python-pro`: Use when a task needs a Python-focused subagent for runtime behavior, packaging, typing, testing, or framework-adjacent implementation.
+- `qa-expert`: Use when a task needs test strategy, acceptance coverage planning, or risk-based QA guidance for a feature or release.
+- `react-specialist`: Use when a task needs a React-focused agent for component behavior, state flow, rendering bugs, or modern React patterns.
+- `refactoring-specialist`: Use when a task needs a low-risk structural refactor, conservative cleanup, or behavior-preserving simplification backed by verification.
+- `reference-builder`: Creates exhaustive technical references and API documentation. Generates comprehensive parameter listings, configuration guides, and searchable reference materials. Use PROACTIVELY for API docs, configuration references, or complete technical specifications.
+- `repo-maintainer`: Use when a task needs repository hygiene work such as naming consistency, stale files, operational clutter, structure drift, redundant assets, or local maintenance of developer-facing scaffolding.
+- `research-analyst`: Use when a task needs cross-source technical investigation, design-option evaluation, or decision support before architecture or implementation.
+- `rust-engineer`: Use when a task needs Rust expertise for ownership-heavy systems code, async runtime behavior, or performance-sensitive implementation.
+- `search-specialist`: Use when a task needs fast, high-signal searching of the codebase or external sources before deeper analysis begins.
+- `security-engineer`: Use when a task needs infrastructure and platform security engineering across IAM, secrets, network controls, or hardening work.
+- `silent-failure-hunter`: Use when reviewing code for swallowed errors, weak fallbacks, missing propagation, or graceful-looking paths that hide real failures.
+- `sql-pro`: Use when a task needs SQL query design, query review, schema-aware debugging, or database migration analysis.
+- `swift-expert`: Use when a task needs Swift expertise for iOS or macOS code, async flows, Apple platform APIs, or strongly typed application logic.
+- `tdd-guide`: Use when a task should be driven test-first, with failing tests before implementation and explicit coverage of success, edge, and failure cases.
+- `test-strategist`: Use when a task needs a deliberate testing plan that decides what to test, at which layer, with what tradeoffs, before or alongside implementation.
+- `thinking-beast-planner`: Use when a hard task needs deep plan-only investigation, transparent reasoning summaries, adversarial critique, source gathering, risk analysis, and verification design before any implementation.
+- `tutorial-engineer`: Creates step-by-step tutorials and educational content from code. Transforms complex concepts into progressive learning experiences with hands-on examples. Use PROACTIVELY for onboarding guides, feature tutorials, or concept explanations.
+- `typescript-pro`: Use when a task needs strong TypeScript help for types, interfaces, refactors, or compiler-driven fixes.
+- `ui-designer`: Use when a task needs concrete UI decisions, interaction design, and implementation-ready design guidance before or during development.
+- `verification-runner`: Use when a task needs the right post-change checks selected, run, and summarized clearly across build, lint, typecheck, tests, and targeted runtime validation.
+- `websocket-engineer`: Use when a task needs real-time transport and state work across WebSocket lifecycle, message contracts, and reconnect/failure behavior.
+- `workflow-orchestrator`: Use when the parent agent needs an explicit Codex subagent workflow for a complex task with multiple stages.

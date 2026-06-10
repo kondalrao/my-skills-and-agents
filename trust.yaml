@@ -1,0 +1,16 @@
+# Allowlist for importing external skill or agent sources.
+# Local migration is always allowed; external imports must match this file.
+allowed_local_roots:
+  - /Users/kkomarag/.agents/skills
+  - /Users/kkomarag/.codex/agents
+  - /Users/kkomarag/.claude/agents
+  - /Users/kkomarag/.claude/skills
+  - /Users/kkomarag/.config/opencode/skills
+  - /Users/kkomarag/.config/opencode/agents
+
+allowed_git_remotes:
+  - git@github.com:kondalrao/my-skills-and-agents.git
+
+allowed_github_repos:
+  - kondalrao/my-skills-and-agents
+
