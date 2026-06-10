@@ -123,7 +123,6 @@ details on local installation, adapter behavior, and common failure modes.
 - `sora`: generating, editing, extending, polling, downloading, deleting, or queueing Sora video jobs with the bundled CLI.
 - `task-observer`: observing repeated task patterns, skill gaps, reusable workflow candidates, or improvements that should become durable skills.
 - `teach`: the user wants to learn a skill or concept over multiple sessions using an Obsidian-backed study workspace with missions, curated resources, lessons, references, learning records, and teaching notes.
-- `technical-poster-design`: creating dense technical posters, infographics, one-page architecture maps, reference sheets, or use-case posters that need high information density, concrete sections, readable labels, diagrams, and PNG/PDF output rather than sparse art-poster styling.
 - `valyu-best-practices`: using Valyu for real-time search, URL content extraction, cited answers, datasource selection, or deep research.
 - `vault-setup`: setting up, verifying, importing into, or configuring an Obsidian vault with bundled vault setup tools.
 - `workflow-orchestration`: coordinating multi-step agent work, selecting skills, decomposing tasks, planning subagent usage, or choosing sequential, parallel, or primary-support workflows.

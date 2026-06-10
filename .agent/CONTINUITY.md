@@ -4,6 +4,7 @@
 
 - 2026-06-10: Added local `teach` skill plan surface for persistent Obsidian-backed learning workspaces.
 - 2026-06-10: Prepared repository publication pass: generic README refresh, full worktree validation, commit, and push to `origin/main`.
+- 2026-06-10: Remove `technical-poster-design` from the shared skill registry, refresh generated state, validate, commit, and push.
 
 ## [DECISIONS]
 
@@ -18,6 +19,7 @@
 - Ran `scripts/sync.sh`; it refreshed adapters/manifest and validated, but did not rewrite `catalog.yaml` when `import_native` had `updates=0`.
 - Refreshed `catalog.yaml` and `state/manifest.json` through `scripts.manage.write_catalog()` and `scripts.manage.write_manifest()`.
 - Replaced README with a generic registry overview, workflow, install pointers, and a catalog-derived list of skills and purposes.
+- Removed `registry/skills/technical-poster-design/` and refreshed `catalog.yaml`, `state/manifest.json`, and `README.md` so the skill is no longer discoverable from repo metadata.
 
 ## [DISCOVERIES]
 
@@ -29,3 +31,4 @@
 - `teach` is discoverable in `catalog.yaml`, `state/manifest.json`, and `/Users/kkomarag/.agents/skills/teach/SKILL.md`.
 - Final validation command: `PYTHONPYCACHEPREFIX=/private/tmp/my-skills-and-agents-pycache scripts/validate.sh` -> `VALIDATE_OK`.
 - README skill catalog matches `catalog.yaml`: 81 catalog skills, 81 README entries, no missing or extra skill names.
+- `technical-poster-design` removal verification: exact-name grep found no repo references, README/catalog both list 80 skills, and validation returned `VALIDATE_OK`.
