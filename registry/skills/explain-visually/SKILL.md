@@ -26,6 +26,9 @@ Skip when the requested deliverable is specifically Markdown with Mermaid, Draw.
    - moving parts
    - decisions and tradeoffs
    - concrete facts, paths, commands, interfaces, and examples
+   - for PDF, Office, HTML, CSV/JSON/XML, ZIP, EPUB, or other document files,
+     route through `convert-plaintext-to-md` first and use its bundled
+     `scripts/markitdown_to_md.py` helper to extract Markdown
 2. Outline the teaching path before building:
    - what the reader should understand
    - explanation order
@@ -92,4 +95,3 @@ These notes adapt useful workflow patterns from `sharakusatoh/systemprompt` prom
 - Prefer visual structure, concise labels, and one main idea per section.
 - Use diagrams or tables when they reduce cognitive load.
 - Check that the artifact can be presented, not just read.
-

@@ -13,6 +13,30 @@ documentation files to properly formatted markdown.
 
 Use `markdown-mermaid-writing` instead when the conversion also requires Mermaid diagram selection, inline diagrams, or Markdown-as-canonical diagram source.
 
+## Source Extraction
+
+If the source is not already plain text or Markdown, first extract Markdown with
+the bundled MarkItDown helper, then apply this skill's formatting and cleanup
+rules to the extracted `.md` file.
+
+Use the helper for PDF, Word, PowerPoint, Excel, HTML, CSV, JSON, XML, ZIP,
+EPUB, image/audio metadata, or other MarkItDown-supported local files:
+
+```bash
+python3 SKILL_DIR/scripts/markitdown_to_md.py INPUT_FILE -o OUTPUT.md
+```
+
+Use `--force` only when replacing an existing generated Markdown file is
+intentional. If MarkItDown is missing, report the helper's install guidance
+instead of re-inventing MarkItDown setup steps.
+
+MarkItDown output is best treated as source extraction for LLM analysis,
+indexing, notes, or drafting. Do not use it when the user needs high-fidelity
+visual publishing, page layout preservation, or presentation rendering.
+
+Remote URLs are intentionally out of scope for the helper; download the file
+first, then convert the local copy.
+
 ## Conversion Methods
 
 You can perform conversions using one of three approaches:
@@ -373,4 +397,3 @@ These notes adapt useful workflow patterns from `sharakusatoh/systemprompt` prom
 - Prefer natural target-language phrasing over literal translation.
 - Flag terms where multiple translations materially change meaning.
 - Keep formatting and structure stable unless the user asks for adaptation.
-

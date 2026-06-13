@@ -1,0 +1,6 @@
+interface:
+  display_name: "Confluence Technical Publisher"
+  short_description: "Publish polished Confluence technical docs"
+  default_prompt: "Use $confluence-technical-publisher to publish this technical spec to Confluence with verified diagrams and page layout."
+policy:
+  allow_implicit_invocation: true

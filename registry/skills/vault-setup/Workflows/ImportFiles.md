@@ -7,10 +7,11 @@ Guidance for importing existing documents into the vault. Replaces the previous 
 Drop files directly into `inbox/`:
 
 Supported formats:
-- `.md` — Markdown (native, works immediately)
-- `.pdf` — Viewable in Obsidian with built-in PDF viewer
-- `.txt` — Plain text, rename to `.md` for full features
-- `.docx` — Not natively supported; convert to Markdown first (see Option 3)
+- `.md` - Markdown (native, works immediately)
+- `.pdf` - Viewable in Obsidian with built-in PDF viewer
+- `.txt` - Plain text, rename to `.md` for full features
+- `.docx`, `.pptx`, `.xlsx`, `.html`, `.csv`, `.json`, `.xml`, `.epub`, `.zip`
+  - convert to Markdown first when the user wants readable notes (see Option 3)
 
 Then tell Claude: **"Sort everything in inbox/"**
 
@@ -32,14 +33,14 @@ What it does:
 
 After running, tell Claude: **"Sort everything in inbox/"**
 
-## Option 3: Converting DOCX/PPTX to Markdown
+## Option 3: Converting Documents to Markdown
 
-For Word documents and PowerPoints, convert to Markdown before importing:
+For PDF, Word, PowerPoint, Excel, HTML, CSV, JSON, XML, ZIP, EPUB, and similar
+source files, route through `convert-plaintext-to-md` and use its bundled
+MarkItDown helper before importing:
 
 ```bash
-# Using pandoc (install: brew install pandoc / apt install pandoc)
-pandoc document.docx -o document.md
-pandoc slides.pptx -o slides.md
+python3 <convert-plaintext-to-md-skill-dir>/scripts/markitdown_to_md.py document.docx -o document.md
 ```
 
 Then move the `.md` files to `inbox/`.

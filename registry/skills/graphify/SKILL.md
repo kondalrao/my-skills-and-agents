@@ -21,9 +21,12 @@ For Obsidian-vault-specific repairs, hook compatibility, or missing artifact dia
 
 1. Confirm Graphify is installed and inspect the local CLI surface before promising commands.
 2. Detect the input corpus and warn when inputs are too small, too broad, binary-heavy, or source-limited.
-3. Run the requested Graphify mode, preserving cache/update behavior when available.
-4. Verify expected artifacts exist before reporting completion.
-5. Keep uncertainty visible: separate extracted relationships from inferred or semantic relationships.
+3. If the corpus includes PDF, Office, HTML, CSV/JSON/XML, ZIP, EPUB, or other
+   document formats, route through `convert-plaintext-to-md` first and use its
+   bundled `scripts/markitdown_to_md.py` helper to create Markdown source files.
+4. Run the requested Graphify mode, preserving cache/update behavior when available.
+5. Verify expected artifacts exist before reporting completion.
+6. Keep uncertainty visible: separate extracted relationships from inferred or semantic relationships.
 
 ## Detailed Workflows
 

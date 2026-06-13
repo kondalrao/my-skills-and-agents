@@ -58,6 +58,7 @@ Create directories lazily when first needed. Do not create placeholder files jus
    - Make it readable, printable, and self-contained.
    - Teach only the knowledge needed for the target skill.
    - Include a short practice activity or quiz with immediate feedback when practical.
+   - Apply the Lesson Learning Loop while designing the explanation, practice, and close.
    - Link to relevant reference documents and prior lessons using relative links.
 6. Update reference material when it will be reused.
    - Create or update `reference/*.html` for glossaries, syntax, algorithms, workflows, recurring diagrams, or durable checklists.
@@ -70,11 +71,25 @@ Create directories lazily when first needed. Do not create placeholder files jus
    - Tell the user what to practice next or what question to answer.
    - Mention any source gaps or assumptions that should be resolved before the next lesson.
 
+## Lesson Learning Loop
+
+Every saved lesson, practice activity, and follow-up teaching turn must satisfy this ACTOR loop unless the user explicitly asks for a one-off explanation:
+
+- Aim: state or clearly imply the user's mission and the specific capability the lesson should change.
+- Compress: center the lesson on one load-bearing idea the user must carry forward; do not make polished summaries the endpoint.
+- Test: include a counterexample, failure mode, edge case, or challenge question so the user has to inspect assumptions instead of merely agree.
+- Own: require recall, teach-back, paraphrase, or connection to the user's real work without leaning on the source text.
+- Run: end with one concrete decision, rule, checklist, experiment, command, artifact, or scenario the user can try next.
+
+AI may frame the mission, interpret confusing material, oppose weak interpretations, coach explanations, and convert ideas into action steps. Do not let AI replace the user's retrieval, judgment, or practice.
+
 ## Lesson Standards
 
 - Teach one thing per lesson.
 - Tie every lesson back to `MISSION.md`.
 - Prefer concrete examples and practice over broad exposition.
+- Include retrieval or teach-back prompts when they would expose shallow understanding.
+- Do not count polished summaries as learning evidence unless the user has also retrieved, explained, challenged, or applied the idea.
 - Keep explanations plain, precise, and appropriately challenging.
 - Use beautiful but simple HTML: readable typography, clear sections, accessible contrast, and print-friendly layout.
 - Include feedback loops. Examples: in-page quiz answers, worked examples, small exercises, scenario questions, or real-world steps to try.

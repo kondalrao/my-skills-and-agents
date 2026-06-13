@@ -37,6 +37,11 @@ vault-setup-skill/
 | Choose Obsidian plugins | `PluginRecommendations.md` | — |
 | Understand folder mapping | `RoleTemplates.md` | — |
 
+For imports where the user wants readable Obsidian notes from PDF, DOCX, XLSX,
+PPTX, HTML, CSV/JSON/XML, ZIP, EPUB, or similar source files, route through
+`convert-plaintext-to-md` first and use its bundled `scripts/markitdown_to_md.py`
+helper before copying the resulting Markdown into `inbox/`.
+
 ## Examples
 
 ```
